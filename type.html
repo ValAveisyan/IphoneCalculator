@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculator</title>
+</head>
+<body>
+  <div class="main" id="main">
+
+          <label for="result"></label>
+          <input type="text" id="result" readonly value="0">
+          <button class="grey" data-value="AC" data-type="action" id="ac">AC</button>
+          <button class="grey" data-value="+/-" data-type="action">+/-</button>
+          <button class="grey" data-value="%" data-type="action">%</button>
+          <button class="orange"   data-value="/" data-type="math" >/</button>
+          <button data-value="7" data-type="num">7</button>
+          <button data-value="8" data-type="num">8</button>
+          <button data-value="9" data-type="num">9</button>
+          <button class="orange" data-value="*" data-type="math" >X</button>
+          <button data-value="4" data-type="num">4</button>
+          <button data-value="5" data-type="num">5</button>
+          <button data-value="6" data-type="num">6</button>
+          <button class="orange" data-value="-"  data-type="math" >-</button>
+          <button data-value="1" data-type="num">1</button>
+          <button data-value="2" data-type="num">2</button>
+          <button data-value="3" data-type="num">3</button>
+          <button class="orange" data-value="+"  data-type="math" >+</button>
+          <button class="zro" data-value="0" data-type="num">0</button>
+          <button data-value="." class="footer" id="ket" data-type="num">.</button>
+          <button class="color footer" data-value="=" data-type="action">=</button>
+
+  </div>
+
+  <script src="calculator.js">  </script>
+</body>
+</html>
