@@ -7,7 +7,7 @@ const ket =  document.getElementById('ket');
 let action = '';
 let arr = [...buttons];
 let box = '';
-let ok = '';
+let search = '';
 
 for (let i = 0; i<arr.length; i++){
     arr[i].addEventListener('click', function (e) {
@@ -21,7 +21,7 @@ for (let i = 0; i<arr.length; i++){
         activeClass(e);
         tools(e);
 
-        if (ok.indexOf('.') === -1){
+        if (search.indexOf('.') === -1){
             ket.attributes['data-value'].value = '.';
         }
 console.log(ok)
@@ -33,7 +33,7 @@ function clear() {
     action = '';
     box = '';
     result.value = '0';
-    ok = ''
+    search = ''
 
 }
 
@@ -46,7 +46,7 @@ function equal() {
         result.value = '0';
         action = '';
         box = '';
-        ok = ''
+        search = ''
     }
     let indexPoint = result.value.indexOf('.');
     if ( indexPoint !== -1){
@@ -92,7 +92,7 @@ function tools(e) {
             result.value = eval(result.value/100);
             break;
         case '.':
-            let indexDat = ok.indexOf('.');
+            let indexDat = search.indexOf('.');
             if ( indexDat !== -1){
                 ket.attributes['data-value'].value = ket.attributes['data-value'].value.replace('.', '');
             }
@@ -106,13 +106,13 @@ function actions(e) {
     if (numValue === 'num') {
         action += e.target.attributes['data-value'].value;
         result.value += e.target.attributes['data-value'].value;
-        ok += e.target.attributes['data-value'].value;
+        search += e.target.attributes['data-value'].value;
         searchBtn(e)
 
     } else if(numValue === 'math'){
         action += e.target.dataset.value;
         box += e.target.dataset.value;
-        ok = ''
+        search = ''
     }
 
 }
