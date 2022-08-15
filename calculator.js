@@ -24,9 +24,7 @@ for (let i = 0; i<arr.length; i++){
         if (search.indexOf('.') === -1){
             ket.attributes['data-value'].value = '.';
         }
-console.log(ok)
     });
-
 }
 
 function clear() {
@@ -62,7 +60,6 @@ function minus () {
         result.value = '-' + result.value;
         action = result.value
     }
-
     if (index !== -1){
         result.value = result.value.replace('-', '');
         action = result.value
@@ -73,13 +70,11 @@ function activeClass(e) {
 
     document.querySelector('.active')?.classList.remove('active');
     e.target.classList.add('active')
-
 }
 
 function tools(e) {
     switch (e.target.dataset.value) {
         case 'AC':
-
             clear();
             break;
         case '=':
@@ -108,13 +103,11 @@ function actions(e) {
         result.value += e.target.attributes['data-value'].value;
         search += e.target.attributes['data-value'].value;
         searchBtn(e)
-
     } else if(numValue === 'math'){
         action += e.target.dataset.value;
         box += e.target.dataset.value;
         search = ''
     }
-
 }
 
 function searchBtn(e) {
